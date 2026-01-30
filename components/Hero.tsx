@@ -102,13 +102,12 @@ export default function HeroSection() {
             Talk to us
           </Link>
 
-          <a
-            href="/resources/spec-sheet.pdf"
-            download
+          <Link
+            href="/bin"
             className="inline-flex rounded-2xl px-5 py-3 font-medium items-center justify-center border border-border text-sm hover:bg-accent hover:text-accent-foreground transition dark:text-white dark:border-white/20"
           >
-            Download spec sheet
-          </a>
+            See the Bin
+          </Link>
         </motion.div>
       </motion.div>
     </section>
