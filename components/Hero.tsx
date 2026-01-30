@@ -35,7 +35,7 @@ export default function HeroSection() {
         className="absolute inset-0 -z-10 bg-center bg-no-repeat opacity-40 dark:opacity-20"
         style={{
           backgroundImage:
-            "url('/images/ChatGPT Image Dec 27, 2025, 03_18_30 AM.png')",
+            "url('/images/hero-revamp.png')",
           backgroundSize: "cover",
         }}
       />
