@@ -24,7 +24,7 @@ export default function AboutPage() {
 
       <section
         ref={sectionRef}
-        className="relative mt-16 min-h-[85vh] flex items-center align-center overflow-hidden bg-card  py-[25px] sm:py-0"
+        className="relative mt-16 lg:mt-0 min-h-[85vh] flex items-center align-center overflow-hidden bg-card  py-[25px] sm:py-0"
       >
         {/* Content */}
         <div className="container-encora relative z-10 px-4 sm:px-8 ">
@@ -102,7 +102,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why returns need their own infrastructure */}
-      <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[96px]">
+      <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[4rem]">
         <div className="">
           <h2 className="text-center heading-lg mb-12 dark:text-white">
             Why returns need their own infrastructure
@@ -233,7 +233,7 @@ export default function AboutPage() {
           <h2 className="text-center heading-lg mb-12 dark:text-white">
             Our story
           </h2>
-          <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
+          <article className="flex h-full text-center flex-col rounded-2xl border border-border bg-card p-6">
             <p className="">
               Encora started with a simple question: why is it so hard to run a
               good reuse or returns program?

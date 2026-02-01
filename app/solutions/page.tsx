@@ -9,42 +9,45 @@ export default function SolutionsPage() {
     <main className="min-h-screen text-foreground">
       <section
         ref={sectionRef}
-        className="relative mt-16 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card"
+        className="relative  mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card"
       >
-        {/* Content */}
-        <div className="container-encora relative z-10 px-4 sm:px-8 ">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-            Solutions
-          </p>
-          {/* Headline */}
-          <div className="">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold lg:mb-6">
-              {/* <span className="block text-encora-green dark:text-white leading-tight animate-text-focus">
-              Encora
-            </span> */}
-              <div
-                className="block text-center leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl
-                 text-encora-green dark:text-encora-mint"
-              >
-                Smart return infrastructure
-              </div>
-            </h1>
-          </div>
+        {/* Background Image Layer */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-[position:center] md:bg-[position:left_center]"
+          style={{
+            backgroundImage: "url('/images/solutions hero image.png')",
+          }}
+        />
 
-          {/* Value props */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm sm:text-base text-encora-green/70 dark:text-encora-mint">
-            <div
-              className="  max-w-3xl
-        text-base
-        sm:text-lg
-        md:text-xl flex text-center items-center gap-2 animate-on-scroll transition-transform duration-300 "
-            >
+        {/* Overlay Layer */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.15))"
+          }}
+        />
+
+        {/* Content */}
+        <div className="container-encora relative z-10 px-4 sm:px-8 w-full h-full flex items-center">
+          <div className="w-full max-w-[720px] text-left">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90 mb-4">
+              Solutions
+            </p>
+            {/* Headline */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-tight text-white mb-6">
+              Smart return infrastructure
+            </h1>
+
+            {/* Value props */}
+            <div className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
               Four building blocks that work together or stand alone—so you can
               plug Encora into campuses, retail, packaging EPR, and events
               without replatforming.
             </div>
           </div>
         </div>
+
+
       </section>
 
       {/* SECTION 1 – Four building blocks */}

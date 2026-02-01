@@ -45,22 +45,35 @@ export default function EncoraReuseV2() {
       {/* Hero Section */}
       <section
         ref={sectionRef}
-        className="relative mt-16 min-h-[80vh] sm:min-h-[70vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card py-[25px] sm:py-0 "
+        className="relative min-h-[80vh] mt-16 lg:mt-0 sm:min-h-[70vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card py-[25px] sm:py-0 "
       >
+        {/* Background Image Layer */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
+          style={{
+            backgroundImage: "url('/images/Reuse page hero.png')",
+          }}
+        />
+
+        {/* Overlay Layer */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%)",
+          }}
+        />
+
         {/* Content */}
         <div className="container-encora relative z-10 px-4 sm:px-8 ">
-          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400">
             Reuse Encora
           </p>
           {/* Headline */}
           <div className="">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-              {/* <span className="block text-encora-green dark:text-white leading-tight animate-text-focus">
-              Encora
-            </span> */}
               <div
-                className="block leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl
-                 text-encora-green dark:text-encora-mint"
+                className="block leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white"
               >
                 Smart reuse — no app required
               </div>
@@ -73,7 +86,7 @@ export default function EncoraReuseV2() {
             {/* ===== Left Content (9 columns) ===== */}
             <div className="col-span-12 lg:col-span-9 space-y-6">
               {/* Description */}
-              <div className="text-[1.1rem] text-center text-sm sm:text-base text-encora-green/70 dark:text-encora-mint leading-relaxed">
+              <div className="text-[1.1rem] text-center text-sm sm:text-base text-white/90 leading-relaxed">
                 Students borrow in seconds. At return, RFID-tagged containers
                 auto-open the correct slot, auto-lock, and the bin captures
                 photo + weight — proof-grade data for campus ops. The mobile app
@@ -92,7 +105,7 @@ export default function EncoraReuseV2() {
                 <a
                   href="/resources/spec-sheet.pdf"
                   download
-                  className="inline-flex items-center rounded-full border border-slate-200/60 px-5 py-2.5 text-sm font-medium text-muted-foreground"
+                  className="inline-flex items-center rounded-full border border-slate-200/60 px-5 py-2.5 text-sm font-medium text-white"
                 >
                   Spec sheet
                 </a>
@@ -100,7 +113,7 @@ export default function EncoraReuseV2() {
 
               {/* RetAI badge */}
               <div>
-                <span className="inline-block rounded-md px-2 py-1 text-xs text-slate-600 dark:text-slate-300 bg-slate-100/40 dark:bg-slate-800/40">
+                <span className="inline-block rounded-md px-2 py-1 text-xs text-slate-300 bg-slate-800/40">
                   Powered by RetAI verification
                 </span>
               </div>
@@ -124,7 +137,7 @@ export default function EncoraReuseV2() {
       </section>
 
       {/* THREE-STEP REUSE */}
-      <section className="mx-auto max-w-6xl px-4 mt-16 md:mt-24 lg:mt-[96px]">
+      <section className="mx-auto max-w-6xl px-4 mt-16 md:mt-24 lg:mt-[4rem]">
         <h2 className="text-center heading-lg mb-12 dark:text-white">
           Three-step reuse
         </h2>

@@ -54,7 +54,7 @@ export const ENVIRONMENTS = [
             "Simple 120V deployments with neutral infrastructure",
         ],
         cta: "Talk about a campus pilot",
-        href: "/contact?context=campus",
+        href: "/contact-us?context=solutions-campus",
         imageSrc:
             "/images/group-four-multiracial-students-spending-time-together.jpg",
         imageAlt: "Students using a returns kiosk on campus",
@@ -68,7 +68,7 @@ export const ENVIRONMENTS = [
             "Data that routes items to reuse, resale, or recycling",
         ],
         cta: "See how this works in stores",
-        href: "/contact?context=retail",
+        href: "/contact-us?context=solutions-retail",
         imageSrc:
             "/images/asian-woman-store-employee-arranging-new-designer-clothes-hangers.jpg",
         imageAlt: "Customer returning items in a retail store",
@@ -82,7 +82,7 @@ export const ENVIRONMENTS = [
             "Modular, neutral infrastructure usable by multiple brands",
         ],
         cta: "See EPR compliance workflow",
-        href: "/contact?context=epr",
+        href: "/contact-us?context=solutions-epr",
         imageSrc:
             "/images/warehouse-industrial-building-interior-with-people-forklifts-handling-goods-storage-area.jpg",
         imageAlt: "Warehouse and packaging environment",
@@ -96,7 +96,7 @@ export const ENVIRONMENTS = [
             "Reusable infrastructure you can move between venues",
         ],
         cta: "Talk about an event pilot",
-        href: "/contact?context=events",
+        href: "/contact-us?context=solutions-events",
         imageSrc: "/images/group-friends-looking-menu-together-restaurant (1).jpg",
         imageAlt: "Event catering with reuse containers",
     },
