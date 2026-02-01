@@ -22,44 +22,31 @@ export default function AboutPage() {
     <main className="min-h-screen text-foreground">
       {/* HERO */}
 
+
+
       <section
         ref={sectionRef}
-        className="relative mt-16 lg:mt-0 min-h-[85vh] flex items-center align-center overflow-hidden bg-card  py-[25px] sm:py-0"
+        className="relative mt-16 lg:mt-0 min-h-[85vh] flex items-center overflow-hidden bg-card py-[25px] sm:py-0"
       >
-        {/* Content */}
-        <div className="container-encora relative z-10 px-4 sm:px-8 ">
-          <p className="text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-            About Encora
-          </p>
-          {/* Headline */}
-          <div className="">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-              {/* <span className="block text-encora-green dark:text-white leading-tight animate-text-focus">
-              Encora
-            </span> */}
-              <div
-                className="block leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl
-                 text-encora-green dark:text-encora-mint"
-              >
-                Neutral infrastructure for returns
-              </div>
-            </h1>
-          </div>
-
-          {/* Value props */}
-
+        <div className="container-encora relative z-10 px-4 sm:px-8">
           <div className="grid grid-cols-12 gap-8 items-center">
-            {/* ===== Left Content (9 columns) ===== */}
-            <div className="col-span-12 lg:col-span-8 space-y-6">
-              {/* Description */}
-              <div className="text-[1.1rem] text-encora-green/70 dark:text-encora-mint leading-relaxed">
-                Encora connects smart bins, tags, and AI verification so
-                retailers, campuses, and public agencies can run better returns
-                and reuse programs—without replacing the systems they already
-                use.
-              </div>
 
-              {/* Buttons */}
+            {/* ===== LEFT SECTION ===== */}
+            <div className="col-span-12 lg:col-span-8 space-y-6">
+              {/* Heading */}
+              <h1 className="leading-tight text-3xl sm:text-4xl md:text-4xl lg:text-6xl font-bold text-encora-green dark:text-encora-mint">
+                Neutral infrastructure <br />
+                for returns
+              </h1>
+
+              {/* Description */}
+              <p className="text-[1.1rem] text-encora-green/70 dark:text-encora-mint leading-relaxed">
+                Encora connects smart bins, tags, and AI verification so retailers,
+                campuses, and public agencies can run better returns and reuse
+                programs—without replacing the systems they already use.
+              </p>
+
+              {/* CTA */}
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact-us"
@@ -67,36 +54,28 @@ export default function AboutPage() {
                 >
                   Talk to us
                 </Link>
-
-                {/* <Link
-                  href="/downloads/platform-overview.pdf"
-                  className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Download the platform overview
-                </Link> */}
               </div>
 
               {/* RetAI badge */}
-              <div>
-                <span className="inline-block rounded-md px-2 py-1 text-xs text-slate-600 dark:text-slate-300 bg-slate-100/40 dark:bg-slate-800/40">
-                  Powered by RetAI verification
-                </span>
-              </div>
+              <span className="inline-block rounded-md px-2 py-1 text-xs text-slate-600 dark:text-slate-300 bg-slate-100/40 dark:bg-slate-800/40">
+                Powered by RetAI verification
+              </span>
             </div>
 
-            {/* ===== Right Image (3 columns) ===== */}
-            <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
-              <div className="rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white dark:bg-slate-900 shadow-xl p-1 flex items-center justify-center">
+            {/* ===== RIGHT SECTION (IMAGE ONLY) ===== */}
+            <div className="col-span-12 lg:col-span-4 flex items-center justify-center">
+              <div className="rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white dark:bg-slate-900 shadow-xl p-1">
                 <Image
                   src="/images/retai-after.jpeg"
                   alt="RetAI logo"
-                  width={300}
-                  height={60}
+                  width={350}
+                  height={350}
                   className="object-contain rounded-2xl"
                   priority
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
