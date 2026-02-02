@@ -9,12 +9,12 @@ export const threeSteps = [
         sub: "Scan a QR (or staff assign) to link the container to the student.",
     },
     {
-        img: "/images/about-context.jpg",
+        img: "/images/three step photo.png",
         title: "Auto-open return",
         sub: "UHF RFID detects the tag and opens the correct slot.",
     },
     {
-        img: "/images/reuse-return.jpg",
+        img: "/images/three step reuse step 3.png",
         title: "Verified check-in",
         sub: "Door auto-locks; bin records photo + weight; optional reason.",
     },

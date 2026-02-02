@@ -81,12 +81,11 @@ export default function AboutPage() {
       </section>
 
       {/* Why returns need their own infrastructure */}
-      <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[4rem]">
+      {/* <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[4rem]">
         <div className="">
           <h2 className="text-center heading-lg mb-12 dark:text-white">
             Why returns need their own infrastructure
           </h2>
-          {/* rounded-2xl border-emerald-500/30 bg-emerald-500/5 p-6 md:p-8 */}
           <article className="flex flex-col rounded-2xl border-emerald-500/30 bg-emerald-500/5 p-6 md:p-8 ">
             <ul className="mt-6 space-y-3 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
               <li>
@@ -124,8 +123,104 @@ export default function AboutPage() {
           </article>
         </div>
 
-        {/* <div className="hidden md:block border-l border-border" /> */}
+     
+      </section> */}
+
+      {/* Why returns need their own infrastructure */}
+      <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[4rem]">
+        <h2 className="text-center heading-lg mb-12 dark:text-white">
+          Why returns need their own infrastructure
+        </h2>
+
+        <article className="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-6 md:p-8">
+          <div className="grid gap-8 md:grid-cols-2 items-start">
+
+            {/* LEFT COLUMN */}
+            <div className="space-y-4">
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Most return and take-back programs were never designed as systems of
+                record.
+              </p>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                They are usually bolted onto tools built for selling, not taking
+                things back.
+              </p>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="space-y-6">
+              <p className="font-semibold text-sm sm:text-base">
+                That leads to:
+              </p>
+
+              <ul className="space-y-3 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
+                <li>Manual tracking, spreadsheets, and workarounds.</li>
+                <li>Limited visibility into what came back, where, and when.</li>
+                <li>No reliable proof that items were returned correctly.</li>
+                <li>Growing compliance risk as EPR and reporting rules expand.</li>
+                <li>
+                  Operators are now being asked to prove what happened at the exact
+                  moment of drop-off.
+                </li>
+                <li>Manual counts and one-off pilots can’t keep up.</li>
+              </ul>
+
+              <p className="font-semibold text-sm sm:text-base">
+                Encora exists to give returns and reuse their own infrastructure
+                layer—shared, neutral, and built for real operations.
+              </p>
+            </div>
+
+          </div>
+        </article>
       </section>
+
+      {/* Why returns need their own infrastructure */}
+      {/* <section className="relative mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[4rem]">
+     
+        <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-emerald-500/10 via-transparent to-emerald-500/5 blur-2xl" />
+
+        <div className="rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-6 md:p-10">
+          <h2 className="text-center heading-lg mb-12 dark:text-white">
+            Why returns need their own infrastructure
+          </h2>
+
+          <article className="flex flex-col rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-6 md:p-8">
+            <ul className="mt-6 space-y-3 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
+              <li>
+                Most return and take-back programs were never designed as
+                systems of record.
+              </li>
+              <li>
+                They are usually bolted onto tools built for selling, not taking
+                things back.
+              </li>
+            </ul>
+
+            <p className="mt-6 font-semibold text-sm sm:text-base">
+              That leads to:
+            </p>
+
+            <ul className="mt-4 space-y-3 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
+              <li>Manual tracking, spreadsheets, and workarounds.</li>
+              <li>Limited visibility into what came back, where, and when.</li>
+              <li>No reliable proof that items were returned correctly.</li>
+              <li>Growing compliance risk as EPR and reporting rules expand.</li>
+              <li>
+                Operators are now being asked to prove what happened at the
+                exact moment of drop-off.
+              </li>
+              <li>Manual counts and one-off pilots can’t keep up.</li>
+            </ul>
+
+            <p className="mt-6 font-semibold">
+              Encora exists to give returns and reuse their own infrastructure
+              layer—shared, neutral, and built for real operations.
+            </p>
+          </article>
+        </div>
+      </section> */}
+
 
       {/* WHAT ENCORA PROVIDES */}
       <section className="mx-auto max-w-6xl mt-16 md:mt-24 lg:mt-[96px]">

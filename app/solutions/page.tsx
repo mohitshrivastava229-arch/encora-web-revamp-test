@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { MODULES, ENVIRONMENTS } from "./data";
+import Link from "next/link";
 
 export default function SolutionsPage() {
   const sectionRef = useRef(null);
@@ -69,39 +70,48 @@ export default function SolutionsPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {MODULES.map((mod) => (
-            <article
-              key={mod.key}
-              className="flex h-full flex-col rounded-2xl border border-border text-card-foreground p-5 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-500/30 dark:border-emerald-500/40 bg-emerald-500/10 dark:bg-emerald-500/20 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
-                <mod.Icon />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">
-                {mod.title}{" "}
-                <span className="ml-1 text-sm font-normal text-muted-foreground">
-                  · {mod.subtitle}
-                </span>
-              </h3>
-              <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-                {mod.bullets.map((b) => (
-                  <li key={b} className="flex gap-2">
-                    <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto pt-4 text-xs">
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 dark:border-emerald-500/50 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300 hover:border-emerald-500 dark:hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors"
-                >
-                  See how this works in practice
-                  <span aria-hidden="true">↴</span>
-                </button>
-              </div>
-            </article>
-          ))}
+          {MODULES.map((mod, index) => {
+            const href =
+              index === 0
+                ? "/bin"
+                : index === 1
+                  ? "/encora-reuse"
+                  : "/encora-access";
+
+            return (
+              <article
+                key={mod.key}
+                className="flex h-full flex-col rounded-2xl border border-border text-card-foreground p-5 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-500/30 dark:border-emerald-500/40 bg-emerald-500/10 dark:bg-emerald-500/20 text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
+                  <mod.Icon />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {mod.title}{" "}
+                  <span className="ml-1 text-sm font-normal text-muted-foreground">
+                    · {mod.subtitle}
+                  </span>
+                </h3>
+                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                  {mod.bullets.map((b) => (
+                    <li key={b} className="flex gap-2">
+                      <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto pt-4 text-xs">
+                  <Link
+                    href={href}
+                    className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 dark:border-emerald-500/50 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300 hover:border-emerald-500 dark:hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors"
+                  >
+                    See how this works in practice
+                    <span aria-hidden="true">↴</span>
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
