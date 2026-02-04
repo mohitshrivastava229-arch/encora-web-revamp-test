@@ -105,17 +105,17 @@ export default function BinPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
                             {
-                                img: "/images/Borrow_image.jpeg",
+                                img: "/images/Smart bin page step 1.png",
                                 title: "Bring your item",
                                 desc: "No packaging needed. Just bring your return item.",
                             },
                             {
-                                img: "/images/three step photo.png",
+                                img: "/images/Smart bin page step 2.png",
                                 title: "Follow the screen",
                                 desc: "Clear, contactless guidance at every step.",
                             },
                             {
-                                img: "/images/three step reuse step 3.png",
+                                img: "/images/Smart bin page step 3.png",
                                 title: "Drop it in",
                                 desc: "Secure drop-off with instant confirmation.",
                             },
