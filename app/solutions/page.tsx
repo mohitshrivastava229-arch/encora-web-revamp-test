@@ -30,17 +30,17 @@ export default function SolutionsPage() {
 
         {/* Content */}
         <div className="container-encora relative z-10 px-4 sm:px-8 w-full h-full flex items-center">
-          <div className="w-full max-w-[720px] text-left">
-            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90 mb-4">
+          <div className="w-full max-w-[720px] text-left mx-auto">
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/90 mb-2">
               Solutions
             </p>
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-tight text-white mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold leading-tight text-white mb-4">
               Smart return infrastructure
             </h1>
 
             {/* Value props */}
-            <div className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+            <div className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl ">
               Four building blocks that work together or stand alone—so you can
               plug Encora into campuses, retail, packaging EPR, and events
               without replatforming.

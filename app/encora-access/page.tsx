@@ -14,6 +14,8 @@ export default function EncoraAccessPage() {
     <main className="min-h-screen text-foreground">
       {/* HERO */}
 
+
+
       {/* Hero Section */}
       <section
         ref={sectionRef}
@@ -32,88 +34,90 @@ export default function EncoraAccessPage() {
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 100%)",
+              "linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.35) 100%)",
           }}
         />
 
         {/* Content */}
         <div className="container-encora relative z-10 px-4 sm:px-8">
+          {/* Eyebrow */}
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400 text-center lg:text-left">
             Encora Access
           </p>
 
-          {/* MAIN GRID */}
-          <div className="grid grid-cols-12 gap-8 items-center mt-6">
-            {/* LEFT CONTENT */}
-            <div className="col-span-12 lg:col-span-8 space-y-6">
+          {/* Main Grid */}
+          <div className="grid grid-cols-12 gap-10 items-center mt-6">
+            {/* Left Content */}
+            <div className="col-span-12 lg:col-span-8 space-y-6 max-w-3xl">
               {/* Headline */}
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center lg:text-left">
-                <span className="block leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white max-w-3xl">
+              <h1 className="text-white font-bold leading-tight text-center lg:text-left">
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   Kill the returns line.
-                  <br />
+                </span>
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   Keep the customer.
                 </span>
               </h1>
 
               {/* Description */}
-              <p className="text-[1.1rem] text-sm sm:text-base text-white/90 leading-relaxed text-center lg:text-left max-w-3xl">
+              <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl text-center lg:text-left">
                 RetAI by Encora turns your manual returns desk into a smart,
                 self-serve drop point. Cut labor hours, shrink lines, and capture
                 real-time data on every return.
               </p>
 
-              {/* Buttons */}
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-center">
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/40 hover:bg-emerald-500 transition-colors"
+                  className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/40 hover:bg-emerald-500 transition-colors"
                 >
                   Book a 20-minute demo
                 </Link>
 
                 <Link
                   href="#how-it-works"
-                  className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors backdrop-blur-sm"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20 transition-colors backdrop-blur-sm"
                 >
                   See how it works
                 </Link>
               </div>
             </div>
 
-            {/* RIGHT IMAGE (NOW PERFECTLY CENTERED) */}
-            <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end self-center">
-              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-1">
+            {/* Right Logo */}
+            <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
+              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-3">
                 <Image
                   src="/images/retai-logo-updated.png"
-                  alt="RetAI logo"
+                  alt="RetAI by Encora logo"
                   width={200}
                   height={60}
-                  className="object-contain rounded-2xl"
+                  className="object-contain"
                   priority
                 />
               </div>
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="mt-12 grid gap-4 md:grid-cols-3 place-items-center">
+          {/* Metrics */}
+          <div className="mt-14 grid gap-4 md:grid-cols-3">
             {HERO_STATS.map((stat) => (
               <div
                 key={stat.title}
-                className="rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md p-4 text-center w-full"
+                className="flex flex-col justify-center rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md p-5 text-center min-h-[96px]"
               >
                 <p className="text-sm font-semibold text-emerald-400">
                   {stat.title}
                 </p>
-                <p className="mt-1 text-xs text-white/80">
+                <p className="mt-2 text-xs text-white/80 leading-snug">
                   {stat.subtitle}
                 </p>
               </div>
             ))}
           </div>
-
         </div>
       </section>
+
 
       {/* RETURNS PAIN SECTION */}
       {/* <section className="mx-auto max-w-6xl px-4 mt-16 md:mt-24 lg:mt-[96px]">
@@ -301,25 +305,42 @@ export default function EncoraAccessPage() {
         <h2 className="text-center heading-lg mb-12 dark:text-white">
           Upgrade from manual to smart returns.
         </h2>
-        <div className="flex flex-col md:flex-row justify-around gap-8">
-          <div>
-            <h3 className="text-sm font-semibold ">Today, manual counter</h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-              <li>• Associate manually looks up orders</li>
-              <li>• Checks receipts and rules</li>
-              <li>• Processes one item at a time</li>
-              <li>• No clean returns data</li>
-              <li>• Long lines slow operations</li>
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Card 1: Today */}
+          <div className="rounded-2xl border bg-card p-8 shadow-sm">
+            <h3 className="text-lg font-bold mb-6 text-foreground">Today: Manual counter returns</h3>
+            <ul className="space-y-4">
+              {[
+                "Associate looks up orders",
+                "Checks receipts and policy rules",
+                "Processes one return at a time",
+                "Limited return data and visibility",
+                "Lines slow the store"
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-red-400 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold ">With RetAI by Encora</h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-              <li>• Customers self-serve returns in under a minute</li>
-              <li>• Automatic policy + order verification</li>
-              <li>• Batch processing during quieter times</li>
-              <li>• Each return tagged with reason, channel, packaging</li>
-              <li>• Lines shrink; shoppers stay in-store</li>
+
+          {/* Card 2: With RetAI */}
+          <div className="rounded-2xl border border-emerald-500/30 bg-emerald-50/50 dark:bg-emerald-900/10 p-8 shadow-md">
+            <h3 className="text-lg font-bold mb-6 text-emerald-800 dark:text-emerald-400">With RetAI by Encora</h3>
+            <ul className="space-y-4">
+              {[
+                "Self-serve returns in under a minute",
+                "Automatic order + policy verification",
+                "Batch processing during quieter hours",
+                "Each return tagged (reason, channel, packaging)",
+                "Shorter lines; shoppers stay in-store"
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-foreground dark:text-white">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -330,31 +351,34 @@ export default function EncoraAccessPage() {
         <h2 className="text-center heading-lg mb-12 dark:text-white">
           Built for Ops, CX, and Risk teams.
         </h2>
-        <div className="grid gap-6 md:grid-cols-3 md:place-items-center">
-          <div>
-            <h3 className="text-sm font-semibold ">For operations</h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-              <li>• Reduce counter workload</li>
-              <li>• Spread out return volume</li>
-              <li>• Extend return hours without staffing</li>
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Ops */}
+          <div className="rounded-2xl border bg-card p-6 h-full">
+            <h4 className="text-lg font-bold mb-4 text-foreground">For Operations</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Reduce counter workload</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Smooth return volume across the day</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Extend return hours without added staffing</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold ">For customer experience</h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-              <li>• Fast, guided self-serve returns</li>
-              <li>• No account or app required</li>
-              <li>• Keep foot traffic in-store</li>
+
+          {/* CX */}
+          <div className="rounded-2xl border bg-card p-6 h-full">
+            <h4 className="text-lg font-bold mb-4 text-foreground">For Customer Experience</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Fast, guided self-serve flow</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> No app required</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Keep foot traffic in-store</li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold ">
-              For risk &amp; loss prevention
-            </h3>
-            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
-              <li>• Verified returns, not anonymous drops</li>
-              <li>• Flags repeat abuse</li>
-              <li>• Full audit trail of items</li>
+
+          {/* Risk */}
+          <div className="rounded-2xl border bg-card p-6 h-full">
+            <h4 className="text-lg font-bold mb-4 text-foreground">For Risk &amp; Loss Prevention</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Verified returns (not anonymous drops)</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Flags repeat abuse patterns</li>
+              <li className="flex gap-2"><span className="text-emerald-500">•</span> Full audit trail per item</li>
             </ul>
           </div>
         </div>
@@ -408,27 +432,24 @@ export default function EncoraAccessPage() {
       {/* FINAL CTA */}
       <section className="mx-auto max-w-6xl px-4 rounded-3xl border border-emerald-500/40  p-6 sm:p-8 mt-16 md:mt-24 lg:mt-[96px] mb-16">
         <h2 className="text-2xl text-center font-semibold sm:text-3xl">
-          Be an early pilot partner.
+          Ready to streamline your returns?
         </h2>
-        <p className="max-w-6xl text-sm text-muted-foreground sm:text-base">
-          We&apos;re working with early retail partners to test RetAI in live
-          stores. If you face long returns lines or rising labor costs,
-          let&apos;s co-design a pilot.
+        <p className="max-w-6xl text-sm text-muted-foreground sm:text-base text-center">
+          See how RetAI by Encora can remove friction from your stores and improve your bottom line.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3  justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/contact?context=retai-pilot"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-600 dark:bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/40 dark:shadow-emerald-500/50 hover:bg-emerald-500 dark:hover:bg-emerald-400 transition-colors"
+            href="/contact-us"
+            className="inline-flex items-center justify-center rounded-full bg-emerald-600 dark:bg-emerald-500 px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-emerald-700 transition-all hover:-translate-y-0.5"
           >
-            Schedule a pilot scoping call
+            Talk to our team
           </Link>
           <Link
-            href="/resources/retai-pilot-expanded.pdf"
-            download
+            href="/resources/retai-overview.pdf"
             target="_blank"
-            className="inline-flex items-center justify-center rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-muted-foreground hover:border-foreground/50 hover:text-foreground transition-colors"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-8 py-3 text-base font-medium text-foreground hover:bg-muted/50 transition-colors"
           >
-            Download the 1-page pilot overview
+            Get the 1-page overview
           </Link>
         </div>
       </section>

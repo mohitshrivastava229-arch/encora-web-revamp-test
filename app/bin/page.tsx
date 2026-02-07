@@ -41,7 +41,7 @@ export default function BinPage() {
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
                     style={{
-                        backgroundImage: "url('/images/bin-lifestyle.png')",
+                        backgroundImage: "url('/images/Smart bin HERO Image.png')",
                     }}
                 />
 
@@ -59,7 +59,7 @@ export default function BinPage() {
                             The Smart Return Bin
                         </h1>
                         <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
-                            Effortless, contactless drop-off — with clear on-screen guidance.
+                            Contactless, verified returns — with on-bin guidance.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-start pt-8">
@@ -241,9 +241,9 @@ export default function BinPage() {
                         ].map((c, i) => (
                             <article
                                 key={i}
-                                className="space-y-3 rounded-2xl border bg-card p-5 h-full hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                                className="space-y-3 rounded-2xl border bg-card p-5 h-full"
                             >
-                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
                                     <c.icon className="w-5 h-5" />
                                 </div>
                                 <h3 className="text-sm font-semibold dark:text-white">{c.title}</h3>
@@ -390,8 +390,8 @@ export default function BinPage() {
 
 function Capability({ icon, title, desc }: { icon: React.ReactNode; title: string, desc: string }) {
     return (
-        <div className="bg-card p-5 rounded-2xl border space-y-3 h-full hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+        <div className="bg-card p-5 rounded-2xl border space-y-3 h-full">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
                 <div className="w-5 h-5 flex items-center justify-center child-svg:w-full child-svg:h-full">
                     {icon}
                 </div>
