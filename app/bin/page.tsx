@@ -36,7 +36,7 @@ export default function BinPage() {
         <main className="flex flex-col w-full overflow-hidden text-foreground">
 
             {/* ================= HERO ================= */}
-            <section className="relative mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card">
+            <section className="relative mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex flex-col overflow-hidden bg-card">
                 {/* Background Image Layer */}
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
@@ -53,7 +53,7 @@ export default function BinPage() {
                     }}
                 />
 
-                <div className="container-encora relative z-10 px-4 sm:px-8 w-full h-full flex items-center">
+                <div className="container-encora relative z-10 px-4 sm:px-8 w-full flex-grow flex items-center">
                     <div className="max-w-[720px] text-left text-white space-y-6">
                         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold tracking-tight leading-tight">
                             The Smart Return Bin
@@ -83,7 +83,7 @@ export default function BinPage() {
 
                 <Link
                     href="#operators"
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/80 hover:text-white text-sm font-medium flex flex-col items-center gap-2 transition-all hover:scale-105 p-2 rounded-lg hover:bg-white/10"
+                    className="z-20 mb-10 self-center text-white/80 hover:text-white text-sm font-medium flex flex-col items-center gap-2 transition-all hover:scale-105 p-2 rounded-lg hover:bg-white/10"
                 >
                     For Operators
                     <ArrowDown className="w-5 h-5 animate-bounce" />
