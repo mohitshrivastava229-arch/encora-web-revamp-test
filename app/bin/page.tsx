@@ -36,58 +36,46 @@ export default function BinPage() {
         <main className="flex flex-col w-full overflow-hidden text-foreground">
 
             {/* ================= HERO ================= */}
-            <section className="relative mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex flex-col overflow-hidden bg-card">
-                {/* Background Image Layer */}
-                <div
-                    className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
-                    style={{
-                        backgroundImage: "url('/images/Smart bin HERO Image.png')",
-                    }}
-                />
+            {/* ================= HERO ================= */}
+            <section className="flex flex-col lg:flex-row min-h-[85vh] w-full">
+                {/* Image Side (Left on Desktop, Top on Mobile) */}
+                <div className="w-full lg:w-1/2 relative h-[50vh] lg:h-auto bg-gray-100">
+                    <Image
+                        src="/images/bin_Hero.jpeg"
+                        alt="Smart Return Bin"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
 
-                {/* Overlay Layer */}
-                <div
-                    className="absolute inset-0 z-0 pointer-events-none"
-                    style={{
-                        background: "linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.15))"
-                    }}
-                />
-
-                <div className="container-encora relative z-10 px-4 sm:px-8 w-full flex-grow flex items-center">
-                    <div className="max-w-[720px] text-left text-white space-y-6">
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold tracking-tight leading-tight">
+                {/* Text Side (Right on Desktop, Bottom on Mobile) */}
+                <div className="w-full lg:w-1/2 bg-[#134e4a] flex flex-col justify-center px-6 py-12 lg:px-12 xl:px-20 lg:py-0 text-left">
+                    <div className="w-full max-w-3xl">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white mb-6">
                             The Smart Return Bin
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
+                        <p className="text-base sm:text-lg md:text-xl text-emerald-100/90 leading-relaxed max-w-2xl mb-10">
                             Contactless, verified returns — with on-bin guidance.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-start pt-8">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-start">
                             <Link
                                 href="#how-it-works"
-                                className="inline-flex items-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-emerald-700 transition-colors"
+                                className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-900/20 hover:bg-emerald-500 transition-all hover:scale-105"
                             >
                                 How it works
                             </Link>
                             <Link
                                 href="/resources/spec-sheet.pdf"
                                 target="_blank"
-                                className="inline-flex items-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors backdrop-blur-sm"
+                                className="inline-flex items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-900/50 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-800/50 hover:border-emerald-400/50 transition-all hover:scale-105"
                             >
                                 Download Spec Sheet
                             </Link>
                         </div>
                     </div>
-
                 </div>
-
-                <Link
-                    href="#operators"
-                    className="z-20 mb-10 self-center text-white/80 hover:text-white text-sm font-medium flex flex-col items-center gap-2 transition-all hover:scale-105 p-2 rounded-lg hover:bg-white/10"
-                >
-                    For Operators
-                    <ArrowDown className="w-5 h-5 animate-bounce" />
-                </Link>
             </section>
 
             {/* ================= HOW IT WORKS (CONSUMER) ================= */}
