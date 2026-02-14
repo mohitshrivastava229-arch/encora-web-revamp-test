@@ -95,50 +95,48 @@ export default function BinPage() {
                 <div className="container-encora px-4">
                     <div className="text-center mb-16 space-y-4">
                         <h2 className="heading-lg dark:text-white">
-                            How it works
+                            How RetAI works in your store.
                         </h2>
                         <p className="mt-2 text-lg text-encora-green dark:text-encora-mint font-medium">
-                            You’ll see confirmation when you’re done.
+                            A simple flow that works alongside your existing POS—no rip-and-replace.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid gap-6 md:grid-cols-4">
                         {[
                             {
-                                img: "/images/Smart bin page step 1.png",
-                                title: "Bring your item",
-                                desc: "No packaging needed. Just bring your return item.",
+                                icon: <BinIcon />,
+                                title: "Customer starts return",
+                                body: "Scan retailer QR, enter a return code, or look up the order.",
                             },
                             {
-                                img: "/images/Smart bin page step 2.png",
-                                title: "Follow the screen",
-                                desc: "Clear, contactless guidance at every step.",
+                                icon: <TagsIcon />,
+                                title: "RetAI verifies & captures",
+                                body: "Confirms eligibility, captures item photo, verifies weight, and flags exceptions.",
                             },
                             {
-                                img: "/images/Smart bin page step 3.png",
-                                title: "Drop it in",
-                                desc: "Secure drop-off with instant confirmation.",
+                                icon: <VerifyIcon />,
+                                title: "Item dropped off",
+                                body: "Guided intake to the right slot. Timestamp and location are logged.",
+                            },
+                            {
+                                icon: <ConnectIcon />,
+                                title: "Staff processes later",
+                                body: "Batch handling with verified metadata to route to restock, resale, or RTV.",
                             },
                         ].map((step, i) => (
                             <article
                                 key={i}
-                                className="flex flex-col h-full space-y-3 rounded-2xl border border-slate-200/6 bg-white dark:bg-slate-900/30 p-4 shadow-sm hover:shadow-md transition-shadow"
+                                className="flex flex-col gap-4 rounded-2xl border bg-card p-6"
                             >
-                                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
-                                    <ImageWithFallback
-                                        src={step.img}
-                                        alt={step.title}
-                                        className="w-full h-full object-cover rounded-xl"
-                                    />
+                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                                    {step.icon}
                                 </div>
-                                <div className="space-y-2">
-                                    {/* 'How it works' card */}
-                                    <h3 className="text-lg font-semibold text-foreground dark:text-white">
-                                        {step.title}
-                                    </h3>
-                                    <p className="text-sm text-muted-foreground dark:text-gray-300">{step.desc}</p>
-
-
+                                <div className="space-y-3">
+                                    <h3 className="text-lg font-bold leading-tight">{step.title}</h3>
+                                    <p className="text-base text-foreground/90 leading-relaxed font-medium">
+                                        {step.body}
+                                    </p>
                                 </div>
                             </article>
                         ))}

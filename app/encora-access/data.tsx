@@ -18,23 +18,23 @@ export const HERO_STATS = [
 export const HOW_STEPS = [
     {
         icon: <BinIcon />,
-        title: "Customer scans",
-        body: "QR code, return code, or look up order.",
+        title: "Customer starts return",
+        body: "Scan retailer QR/RMA, enter a return code, or look up the order.",
     },
     {
         icon: <TagsIcon />,
-        title: "RetAI verifies",
-        body: "Checks order, window, and risk flags.",
+        title: "RetAI verifies & captures",
+        body: "Confirms eligibility, imports return details, captures a photo, verifies weight, and flags exceptions.",
     },
     {
         icon: <VerifyIcon />,
-        title: "Item is dropped",
-        body: "Smart bin logs and unlocks for deposit.",
+        title: "Item dropped off",
+        body: "Guided intake to the right slot. Timestamp + location are logged and tied to the return.",
     },
     {
         icon: <ConnectIcon />,
-        title: "Team processes later",
-        body: "Staff process returns in batches.",
+        title: "Staff processes later",
+        body: "Batch process using verified data (photo, weight, risk flags) to route to restock, resale, or RTV.",
     },
 ];
 

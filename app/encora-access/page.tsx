@@ -247,13 +247,17 @@ export default function EncoraAccessPage() {
           {HOW_STEPS.map((step, i) => (
             <article
               key={i}
-              className="space-y-3 rounded-2xl border bg-card p-5"
+              className="flex flex-col gap-4 rounded-2xl border bg-card p-5"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/20 text-sm font-semibold text-emerald-300">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                 {step.icon}
               </div>
-              <h3 className="text-sm font-semibold">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.body}</p>
+              <div className="space-y-2">
+                <h3 className="text-base font-bold leading-tight">{step.title}</h3>
+                <p className="text-sm text-foreground/80 leading-relaxed font-medium">
+                  {step.body}
+                </p>
+              </div>
             </article>
           ))}
         </div>
