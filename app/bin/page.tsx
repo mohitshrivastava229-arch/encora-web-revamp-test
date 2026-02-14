@@ -72,7 +72,7 @@ export default function BinPage() {
                             <Link
                                 href="/resources/spec-sheet.pdf"
                                 target="_blank"
-                                className="inline-flex items-center rounded-full border border-slate-200/60 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors"
+                                className="inline-flex items-center rounded-full border border-white/60 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors backdrop-blur-sm"
                             >
                                 Download Spec Sheet
                             </Link>
@@ -102,35 +102,32 @@ export default function BinPage() {
                         </p>
                     </div>
 
-                    <div className="grid gap-6 md:grid-cols-4">
+                    <div className="grid gap-6 md:grid-cols-3">
                         {[
                             {
                                 icon: <BinIcon />,
-                                title: "Customer starts return",
-                                body: "Scan retailer QR, enter a return code, or look up the order.",
+                                title: "Identify your return",
+                                body: "Scan or present your item to begin the return.",
                             },
                             {
-                                icon: <TagsIcon />,
-                                title: "RetAI verifies & captures",
-                                body: "Confirms eligibility, captures item photo, verifies weight, and flags exceptions.",
+                                icon: <div className="text-2xl font-bold font-mono">2</div>, // Placeholder or specific icon if available, using number/text for now or revert to existing icon
+                                title: "Follow the screen",
+                                body: "Clear, on-bin guidance at every step.",
+                                iconComponent: <VerifyIcon />
                             },
                             {
-                                icon: <VerifyIcon />,
-                                title: "Item dropped off",
-                                body: "Guided intake to the right slot. Timestamp and location are logged.",
-                            },
-                            {
-                                icon: <ConnectIcon />,
-                                title: "Staff processes later",
-                                body: "Batch handling with verified metadata to route to restock, resale, or RTV.",
+                                icon: <ArrowDown />,
+                                title: "Drop",
+                                body: "Secure drop-off with instant confirmation.",
+                                iconComponent: <ConnectIcon />
                             },
                         ].map((step, i) => (
                             <article
                                 key={i}
-                                className="flex flex-col gap-4 rounded-2xl border bg-card p-6"
+                                className="flex flex-col gap-4 rounded-2xl border bg-card p-6 h-full"
                             >
                                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                                    {step.icon}
+                                    {step.iconComponent || step.icon}
                                 </div>
                                 <div className="space-y-3">
                                     <h3 className="text-lg font-bold leading-tight">{step.title}</h3>
@@ -145,7 +142,7 @@ export default function BinPage() {
             </section>
 
             {/* ================= BIN FEATURES ================= */}
-            <section className="mt-16 md:mt-24 lg:mt-[96px]">
+            <section className="mt-16 md:mt-24 lg:mt-32">
                 <div className="container-encora px-4">
                     <h2 className="heading-lg text-center mb-16 dark:text-white">
                         Built for quick, everyday returns
@@ -157,66 +154,86 @@ export default function BinPage() {
                                 src="/images/bin-cutout.png"
                                 alt="Smart Return Bin"
                                 fill
-                                className="object-contain"
+                                className="object-contain z-10"
                             />
 
                             {/* Desktop pointers */}
-                            <div className="hidden md:block absolute inset-0">
-                                {/* Pointer 1: Screen */}
-                                <div className="absolute top-[35%] left-[5%] lg:left-[10%] flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-                                    <div className="text-right bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-3 rounded-xl shadow-sm border border-white/50">
-                                        <h4 className="font-bold text-encora-green dark:text-encora-mint">Guided instructions</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Clear prompts on-screen</p>
+                            <div className="hidden md:block absolute inset-0 z-20">
+                                {/* Pointer 1: Guided Instructions (Left, Top) -> Screen */}
+                                <div className="absolute top-[28%] left-0 w-[30%] flex items-center justify-end group">
+                                    <div className="text-right pr-4">
+                                        <div className="bg-white/90 dark:bg-card/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+                                            <h4 className="font-bold text-encora-green dark:text-encora-mint text-lg leading-tight">Guided instructions</h4>
+                                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Scan or match order here</p>
+                                        </div>
                                     </div>
-                                    <span className="w-3 h-3 bg-encora-green rounded-full shadow-[0_0_0_4px_rgba(25,76,77,0.2)]" />
+                                    <div className="relative flex items-center">
+                                        <div className="w-12 lg:w-20 h-px bg-encora-green"></div>
+                                        <div className="w-1.5 h-1.5 bg-encora-green rounded-full"></div>
+                                    </div>
                                 </div>
 
-                                {/* Pointer 2: Center opening */}
-                                <div className="absolute top-[28%] right-[5%] lg:right-[10%] flex items-center gap-3 flex-row-reverse animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-                                    <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-3 rounded-xl shadow-sm border border-white/50">
-                                        <h4 className="font-bold text-encora-green dark:text-encora-mint">Quick drop-off</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Hands-free return</p>
+                                {/* Pointer 2: Quick Drop (Right, Top) -> Induction */}
+                                <div className="absolute top-[22%] right-0 w-[30%] flex items-center justify-start flex-row-reverse group">
+                                    <div className="text-left pl-4">
+                                        <div className="bg-white/90 dark:bg-card/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+                                            <h4 className="font-bold text-encora-green dark:text-encora-mint text-lg leading-tight">Quick drop-off</h4>
+                                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Induction slot opens automatically</p>
+                                        </div>
                                     </div>
-                                    <span className="w-3 h-3 bg-encora-green rounded-full shadow-[0_0_0_4px_rgba(25,76,77,0.2)]" />
+                                    <div className="relative flex items-center flex-row-reverse">
+                                        <div className="w-12 lg:w-20 h-px bg-encora-green"></div>
+                                        <div className="w-1.5 h-1.5 bg-encora-green rounded-full"></div>
+                                    </div>
                                 </div>
 
-                                {/* Pointer 3: Side opening/Multiple slots */}
-                                <div className="absolute bottom-[45%] left-[15%] lg:left-[20%] flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-                                    <div className="text-right bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-3 rounded-xl shadow-sm border border-white/50">
-                                        <h4 className="font-bold text-encora-green dark:text-encora-mint">Multiple intake slots</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Fits common items</p>
+                                {/* Pointer 3: Secure Locking Doors (Right, Bottom) -> Door Seam */}
+                                <div className="absolute top-[60%] right-0 w-[30%] flex items-center justify-start flex-row-reverse group">
+                                    <div className="text-left pl-4">
+                                        <div className="bg-white/90 dark:bg-card/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+                                            <h4 className="font-bold text-encora-green dark:text-encora-mint text-lg leading-tight">Secure locking doors</h4>
+                                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Automatically locks between drops</p>
+                                        </div>
                                     </div>
-                                    <span className="w-3 h-3 bg-encora-green rounded-full shadow-[0_0_0_4px_rgba(25,76,77,0.2)]" />
+                                    <div className="relative flex items-center flex-row-reverse">
+                                        <div className="w-16 lg:w-24 h-px bg-encora-green"></div>
+                                        <div className="w-1.5 h-1.5 bg-encora-green rounded-full"></div>
+                                    </div>
                                 </div>
 
-                                {/* Pointer 4: Durable body */}
-                                <div className="absolute bottom-[25%] right-[10%] lg:right-[15%] flex items-center gap-3 flex-row-reverse animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
-                                    <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-3 rounded-xl shadow-sm border border-white/50">
-                                        <h4 className="font-bold text-encora-green dark:text-encora-mint">Durable design</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-300">Made for busy places</p>
+                                {/* Pointer 4: Multiple Intake Slots (Left, Bottom) -> Slot area */}
+                                <div className="absolute top-[65%] left-0 w-[30%] flex items-center justify-end group">
+                                    <div className="text-right pr-4">
+                                        <div className="bg-white/90 dark:bg-card/90 backdrop-blur-sm p-3 rounded-lg shadow-sm">
+                                            <h4 className="font-bold text-encora-green dark:text-encora-mint text-lg leading-tight">Multiple intake slots</h4>
+                                            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">For various item sizes</p>
+                                        </div>
                                     </div>
-                                    <span className="w-3 h-3 bg-encora-green rounded-full shadow-[0_0_0_4px_rgba(25,76,77,0.2)]" />
+                                    <div className="relative flex items-center">
+                                        <div className="w-12 lg:w-20 h-px bg-encora-green"></div>
+                                        <div className="w-1.5 h-1.5 bg-encora-green rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Mobile Fallback Bullets */}
-                        <div className="md:hidden grid grid-cols-2 gap-4 mt-8">
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                            <div className="bg-white dark:bg-card p-4 rounded-lg shadow-sm border">
                                 <h4 className="font-bold text-encora-green dark:text-encora-mint text-sm">Guided instructions</h4>
-                                <p className="text-xs text-gray-600">Clear prompts on-screen</p>
+                                <p className="text-xs text-muted-foreground">Scan or match order here</p>
                             </div>
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
+                            <div className="bg-white dark:bg-card p-4 rounded-lg shadow-sm border">
                                 <h4 className="font-bold text-encora-green dark:text-encora-mint text-sm">Quick drop-off</h4>
-                                <p className="text-xs text-gray-600">Hands-free return</p>
+                                <p className="text-xs text-muted-foreground">Induction slot opens automatically</p>
                             </div>
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
+                            <div className="bg-white dark:bg-card p-4 rounded-lg shadow-sm border">
+                                <h4 className="font-bold text-encora-green dark:text-encora-mint text-sm">Secure locking doors</h4>
+                                <p className="text-xs text-muted-foreground">Automatically locks between drops</p>
+                            </div>
+                            <div className="bg-white dark:bg-card p-4 rounded-lg shadow-sm border">
                                 <h4 className="font-bold text-encora-green dark:text-encora-mint text-sm">Multiple intake slots</h4>
-                                <p className="text-xs text-gray-600">Fits common items</p>
-                            </div>
-                            <div className="bg-white p-4 rounded-lg shadow-sm">
-                                <h4 className="font-bold text-encora-green dark:text-encora-mint text-sm">Durable design</h4>
-                                <p className="text-xs text-gray-600">Made for busy places</p>
+                                <p className="text-xs text-muted-foreground">For various item sizes</p>
                             </div>
                         </div>
                     </div>
@@ -224,7 +241,7 @@ export default function BinPage() {
             </section>
 
             {/* ================= WHY SMARTER (CONSUMER) ================= */}
-            <section className="mt-16 md:mt-24 lg:mt-[96px]">
+            <section className="mt-16 md:mt-24 lg:mt-32">
                 <div className="container-encora px-4">
                     <h2 className="heading-lg text-center mb-16 dark:text-white">
                         Why it’s smarter
@@ -233,9 +250,9 @@ export default function BinPage() {
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {[
                             { icon: CheckCircle, title: "Clear confirmation", desc: "Know instantly your drop-off worked." },
-                            { icon: Smartphone, title: "Contactless experience", desc: "No staff needed." },
+                            { icon: Smartphone, title: "No staff required", desc: "No staff needed." },
                             { icon: MapPin, title: "Built for public spaces", desc: "Designed for high-traffic locations." },
-                            { icon: Zap, title: "Returns move faster", desc: "Helps items get to their next step sooner." },
+                            { icon: Zap, title: "Faster customer flow", desc: "Helps items get to their next step sooner." },
                         ].map((c, i) => (
                             <article
                                 key={i}
@@ -302,9 +319,9 @@ export default function BinPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-                        {/* Subsection 4A: Why it's smarter (Operator) */}
+                        {/* Subsection 4A: Core capabilities (Operator) */}
                         <div className="space-y-8">
-                            <h3 className="heading-md dark:text-white">Why it’s smarter</h3>
+                            <h3 className="heading-md dark:text-white">Core capabilities</h3>
                             <ul className="space-y-6">
                                 {[
                                     { title: "Real-time Verification", desc: "Instantly validates returned items against database records." },
@@ -336,7 +353,7 @@ export default function BinPage() {
                                 />
                                 <Capability
                                     icon={<TagsIcon />}
-                                    title="Tag Agnostic"
+                                    title="QR + UHF RFID + NFC compatible"
                                     desc="Compatible with various RFID and NFC standards for broad integration."
                                 />
                                 <Capability
@@ -362,7 +379,7 @@ export default function BinPage() {
                         Ready to upgrade your return infrastructure?
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                        See the full technical specifications or talk to our team about a pilot program.
+                        See the full technical specifications or talk to our team about a deployment.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Link
