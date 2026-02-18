@@ -291,7 +291,7 @@ export default function EncoraAccessPage() {
           <div className="space-y-3">
             <div className="relative h-56 border bg-card w-full aspect-[4/3] overflow-hidden rounded-xl">
               <Image
-                src="/images/reuse-return.jpg"
+                src="/images/reuse-return_updated.png"
                 alt="Self-serve RetAI kiosk (after)"
                 fill
                 className="w-full h-full object-cover rounded-xl "
