@@ -17,11 +17,11 @@ export default function EncoraAccessPage() {
 
 
       {/* Hero Section */}
-      <section
+      {/* <section
         ref={sectionRef}
         className="relative mt-16 lg:mt-0 min-h-[80vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden py-[25px] sm:py-0"
       >
-        {/* Background Image */}
+
         <div
           className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-center"
           style={{
@@ -29,7 +29,7 @@ export default function EncoraAccessPage() {
           }}
         />
 
-        {/* Overlay */}
+
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -38,18 +38,18 @@ export default function EncoraAccessPage() {
           }}
         />
 
-        {/* Content */}
+
         <div className="container-encora relative z-10 px-4 sm:px-8">
-          {/* Eyebrow */}
+
           <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400 text-center lg:text-left">
             Encora Access
           </p>
 
-          {/* Main Grid */}
+
           <div className="grid grid-cols-12 gap-10 items-center mt-6">
-            {/* Left Content */}
+
             <div className="col-span-12 lg:col-span-8 space-y-6 max-w-3xl">
-              {/* Headline */}
+
               <h1 className="text-white font-bold leading-tight text-center lg:text-left">
                 <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   Kill the returns line.
@@ -59,14 +59,14 @@ export default function EncoraAccessPage() {
                 </span>
               </h1>
 
-              {/* Description */}
+
               <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl text-center lg:text-left">
                 RetAI by Encora turns your manual returns desk into a smart,
                 self-serve drop point. Cut labor hours, shrink lines, and capture
                 real-time data on every return.
               </p>
 
-              {/* CTAs */}
+
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
                 <Link
                   href="/contact-us"
@@ -84,7 +84,7 @@ export default function EncoraAccessPage() {
               </div>
             </div>
 
-            {/* Right Logo */}
+
             <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
               <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-3">
                 <Image
@@ -99,7 +99,7 @@ export default function EncoraAccessPage() {
             </div>
           </div>
 
-          {/* Metrics */}
+
           <div className="mt-14 grid gap-4 md:grid-cols-3">
             {HERO_STATS.map((stat) => (
               <div
@@ -116,8 +116,118 @@ export default function EncoraAccessPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+
+
+      <section
+        ref={sectionRef}
+        className="relative mt-16 lg:mt-0 min-h-[80vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden py-[25px] sm:py-0"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/RetAI page hero photo. .png"
+            alt="Retail returns desk"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70 lg:bg-black/60 z-0" />
+
+        {/* Content Container */}
+        <div className="container-encora relative z-10 px-5 sm:px-8 py-16 lg:py-0">
+
+          {/* Eyebrow */}
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-emerald-400 text-center lg:text-left">
+            Encora Access
+          </p>
+
+          {/* Grid Layout */}
+          <div className="grid grid-cols-12 gap-8 items-center mt-6">
+
+            {/* LEFT SIDE CONTENT */}
+            <div className="col-span-12 lg:col-span-8 space-y-6 text-center lg:text-left">
+
+              {/* Headline */}
+              <h1 className="text-white font-bold leading-tight">
+                <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  Kill the returns line.
+                </span>
+                <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  Keep the customer.
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base text-white/90 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                RetAI by Encora turns your manual returns desk into a smart,
+                self-serve drop point. Cut labor hours, shrink lines, and capture
+                real-time data on every return.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-3">
+                <Link
+                  href="/contact-us"
+                  aria-label="Book a 20-minute demo"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-emerald-500 transition"
+                >
+                  Book a 20-minute demo
+                </Link>
+
+                <Link
+                  href="#how-it-works"
+                  aria-label="See how it works"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/20 backdrop-blur-sm transition"
+                >
+                  See how it works
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT SIDE LOGO */}
+            <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md shadow-xl p-4">
+                <Image
+                  src="/images/retai-logo-updated.png"
+                  alt="RetAI by Encora logo"
+                  width={180}
+                  height={60}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* HERO METRICS */}
+          <div className="mt-12 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {HERO_STATS.map((stat) => (
+              <div
+                key={stat.title}
+                className="flex flex-col justify-center rounded-2xl border border-white/20 
+                     bg-black/50 backdrop-blur-md 
+                     p-5 sm:p-6 
+                     text-center 
+                     min-h-[110px] sm:min-h-[120px]"
+              >
+                <p className="text-base sm:text-lg font-bold text-emerald-400">
+                  {stat.title}
+                </p>
+
+                <p className="mt-2 text-xs sm:text-sm text-white/80 leading-snug">
+                  {stat.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
 
       {/* RETURNS PAIN SECTION */}
       {/* <section className="mx-auto max-w-6xl px-4 mt-16 md:mt-24 lg:mt-[96px]">
