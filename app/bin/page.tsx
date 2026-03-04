@@ -36,30 +36,31 @@ export default function BinPage() {
         <main className="flex flex-col w-full overflow-hidden text-foreground">
 
             {/* ================= HERO ================= */}
-            {/* ================= HERO ================= */}
-            <section className="flex flex-col lg:flex-row min-h-[85vh] w-full">
-                {/* Image Side (Left on Desktop, Top on Mobile) */}
-                <div className="w-full lg:w-1/2 relative h-[50vh] lg:h-auto bg-gray-100">
+            <section className="relative flex min-h-[100vh] w-full items-center">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/bin_Hero.jpeg"
+                        src="/images/Smart bin HERO Image.png"
                         alt="Smart Return Bin"
                         fill
-                        className="object-cover"
+                        className="object-cover object-center"
                         priority
                     />
+                    {/* Gradient overlay to ensure text readability against the image */}
+                    <div className="absolute inset-0 bg-black/20 "></div>
                 </div>
 
-                {/* Text Side (Right on Desktop, Bottom on Mobile) */}
-                <div className="w-full lg:w-1/2 bg-[#134e4a] flex flex-col justify-center px-6 py-12 lg:px-12 xl:px-20 lg:py-0 text-left">
-                    <div className="w-full max-w-3xl">
+                {/* Text Overlay */}
+                <div className="relative z-10 w-full  ml-auto px-6 py-12 lg:px-12 xl:px-20 text-center flex flex-col items-center">
+                    <div className="w-full max-w-[45rem] flex flex-col items-center">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white mb-6">
                             The Smart Return Bin
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl text-emerald-100/90 leading-relaxed max-w-2xl mb-10">
+                        <p className="text-base sm:text-lg md:text-xl text-emerald-50/90 leading-relaxed max-w-xl mb-10">
                             Contactless, verified returns — with on-bin guidance.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-start">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="#how-it-works"
                                 className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-900/20 hover:bg-emerald-500 transition-all hover:scale-105"
