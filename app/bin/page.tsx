@@ -51,8 +51,12 @@ export default function BinPage() {
                 </div>
 
                 {/* Text Overlay */}
-                <div className="relative z-10 w-full  ml-auto px-6 py-12 lg:px-12 xl:px-20 text-center flex flex-col items-center">
-                    <div className="w-full max-w-[45rem] flex flex-col items-center">
+                <div className="relative z-10 w-full px-6 py-12 lg:px-12 xl:px-20 flex flex-col items-center justify-center">
+
+                    <div className="w-full max-w-[45rem] flex flex-col items-center text-center">
+                        <p className="w-full text-left text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-4">
+                            Smart Return Bin
+                        </p>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white mb-6">
                             The Smart Return Bin
                         </h1>
