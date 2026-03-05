@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       <section
         ref={sectionRef}
-        className="relative mt-16 lg:mt-0 min-h-[85vh] flex items-center overflow-hidden bg-card py-[25px] sm:py-0"
+        className="relative mt-16 lg:mt-0 min-h-[100vh] flex items-center overflow-hidden bg-card py-[25px] sm:py-0"
       >
         <div className="container-encora relative z-10 px-4 sm:px-8">
           <div className="grid grid-cols-12 gap-8 items-center">

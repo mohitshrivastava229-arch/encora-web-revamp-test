@@ -122,7 +122,7 @@ export default function EncoraAccessPage() {
 
       <section
         ref={sectionRef}
-        className="relative mt-16 lg:mt-0 min-h-[80vh] sm:min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden py-[25px] sm:py-0"
+        className="relative mt-16 lg:mt-0 min-h-[80vh] sm:min-h-[80vh] lg:min-h-[100vh] flex items-center overflow-hidden py-[25px] sm:py-0"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

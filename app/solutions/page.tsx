@@ -10,7 +10,7 @@ export default function SolutionsPage() {
     <main className="min-h-screen text-foreground">
       <section
         ref={sectionRef}
-        className="relative  mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card"
+        className="relative  mt-16 lg:mt-0 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[100vh] flex items-center align-center overflow-hidden bg-card"
       >
         {/* Background Image Layer */}
         <div

@@ -45,7 +45,7 @@ export default function EncoraReuseV2() {
       {/* Hero Section */}
       <section
         ref={sectionRef}
-        className="relative min-h-[80vh] mt-16 lg:mt-0 sm:min-h-[70vh] lg:min-h-[85vh] flex items-center align-center overflow-hidden bg-card py-[25px] sm:py-0 "
+        className="relative min-h-[80vh] mt-16 lg:mt-0 sm:min-h-[70vh] lg:min-h-[100vh] flex items-center align-center overflow-hidden bg-card py-[25px] sm:py-0 "
       >
         {/* Background Image Layer */}
         <div
